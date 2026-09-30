@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Human &amp; Chimpanzee | Learn, Explore &amp; Discover</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐒%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#eef7f0;--text:#222;--card:#ffffff;--soft:#dff0e3;--label:#f2f6f2;--labelh:#dcebdd;--heading:#164a2b;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0f1c14;--text:#e6efe8;--card:#1a2b20;--soft:#223a2a;--label:#22352a;--labelh:#2b4634;--heading:#8fd6a5;color-scheme:dark;}
+}
+:root[data-theme="dark"]{--bg:#0f1c14;--text:#e6efe8;--card:#1a2b20;--soft:#223a2a;--label:#22352a;--labelh:#2b4634;--heading:#8fd6a5;color-scheme:dark;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);}
+*{box-sizing:border-box;}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);}
+.page{background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+.page[hidden]{display:none;}
+#pg-home {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-home header {
+            background: linear-gradient(135deg, #164a2b, #287a43);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+#pg-home header h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+#pg-home header p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+#pg-home .hero {
+            max-width: 900px;
+            margin: -25px auto 30px;
+            padding: 25px;
+        }
+#pg-home .hero-card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+#pg-home .hero-card img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+#pg-home .hero-card h2 {
+            color: var(--heading);
+            font-size: 28px;
+        }
+#pg-home .hero-card p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+#pg-home .start-button {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 16px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+#pg-home .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-home .card {
+            background: var(--card);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+        }
+#pg-home .card h2 {
+            color: var(--heading);
+        }
+#pg-home .card p {
+            line-height: 1.6;
+        }
+#pg-home .card a {
+            text-decoration: none;
+        }
+#pg-home .card button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #287a43;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+#pg-home .card button:active {
+            background: #164a2b;
+        }
+#pg-home .welcome {
+            background: var(--soft);
+            text-align: center;
+            padding: 25px;
+            border-radius: 18px;
+            margin: 20px 0;
+        }
+#pg-home .welcome h2 {
+            color: var(--heading);
+        }
+#pg-home .share {
+            text-align: center;
+            background: #164a2b;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+#pg-home .share button {
+            background: var(--card);
+            color: var(--heading);
+            border: none;
+            padding: 14px 25px;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+#pg-home footer {
+            background: #0d321d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+#pg-similarities {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-similarities header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+#pg-similarities .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-similarities .lesson {
+            background: var(--card);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+#pg-similarities .lesson h2 {
+            color: var(--heading);
+        }
+#pg-similarities .fact {
+            background: var(--soft);
+            padding: 15px;
+            border-radius: 10px;
+        }
+#pg-similarities .back {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+#pg-differences {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-differences header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+#pg-differences .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-differences .lesson {
+            background: var(--card);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+#pg-differences .lesson h2 {
+            color: var(--heading);
+        }
+#pg-differences .fact {
+            background: var(--soft);
+            padding: 15px;
+            border-radius: 10px;
+        }
+#pg-differences .back {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+#pg-evolution {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-evolution header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+#pg-evolution .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-evolution .lesson {
+            background: var(--card);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+#pg-evolution .lesson h2 {
+            color: var(--heading);
+        }
+#pg-evolution .fact {
+            background: var(--soft);
+            padding: 15px;
+            border-radius: 10px;
+        }
+#pg-evolution .timeline {
+            text-align: center;
+            font-size: 18px;
+            line-height: 2;
+        }
+#pg-evolution .back {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+#pg-behavior {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-behavior header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+#pg-behavior .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-behavior .lesson {
+            background: var(--card);
+            padding: 20px;
+            margin: 18px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+#pg-behavior .lesson h2 {
+            color: var(--heading);
+        }
+#pg-behavior .fact {
+            background: var(--soft);
+            padding: 15px;
+            border-radius: 10px;
+        }
+#pg-behavior .back {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+#pg-interaction {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-interaction header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+#pg-interaction header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+#pg-interaction .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-interaction .lesson {
+            background: var(--card);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+#pg-interaction .lesson h2 {
+            color: var(--heading);
+        }
+#pg-interaction .chimp-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+#pg-interaction .fact {
+            background: var(--soft);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+#pg-interaction .video {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 12px;
+        }
+#pg-interaction .back {
+            display: inline-block;
+            background: #287a43;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 10px 0 25px;
+        }
+#pg-quiz {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+#pg-quiz header {
+            background: #164a2b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+#pg-quiz .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+        }
+#pg-quiz .question {
+            background: var(--card);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+        }
+#pg-quiz .question h2 {
+            color: var(--heading);
+        }
+#pg-quiz label {
+            display: block;
+            background: var(--label);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+        }
+#pg-quiz label:hover {
+            background: var(--labelh);
+        }
+#pg-quiz button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #287a43;
+            color: white;
+            font-size: 18px;
+        }
+#pg-quiz #result {
+            background: var(--card);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+#pg-quiz .back {
+            display: inline-block;
+            background: #164a2b;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+</style>
+</head>
+<body>
+<section class="page" id="pg-home" data-title="Human & Chimpanzee | Learn, Explore & Discover" hidden>
+
+<header>
+
+    <div style="font-size:55px;">
+        🧑🏽 🐒 🌿
+    </div>
+
+    <h1>Human & Chimpanzee</h1>
+
+    <p>
+        Explore. Learn. Discover.
+    </p>
+
+    <p>
+        Discover the fascinating connection between humans and chimpanzees.
+    </p>
+
+</header>
+
+
+<div class="hero">
+
+    <div class="hero-card">
+
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chimpanzee_8.jpg"
+        alt="Chimpanzee" loading="lazy" onerror="this.style.display='none'">
+
+        <h2>Welcome, Explorer! 👋</h2>
+
+        <p>
+            Ready to discover something amazing?
+            Explore the similarities, differences, evolution,
+            behavior and interaction between humans and chimpanzees.
+        </p>
+
+        <a class="start-button" href="#similarities">
+            🚀 Start Learning
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h2>🌍 What will you discover?</h2>
+
+        <p>
+            This website is an educational project designed to make
+            learning about humans and chimpanzees interesting,
+            simple and fun.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🧬 Our Similarities</h2>
+
+        <p>
+            Discover the biological and behavioral similarities
+            between humans and chimpanzees.
+        </p>
+
+        <a href="#similarities">
+            <button>Explore Similarities</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🔍 Our Differences</h2>
+
+        <p>
+            Learn how humans and chimpanzees differ in anatomy,
+            behavior and communication.
+        </p>
+
+        <a href="#differences">
+            <button>Explore Differences</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🌳 Evolution</h2>
+
+        <p>
+            Discover our shared evolutionary history and common ancestry.
+        </p>
+
+        <a href="#evolution">
+            <button>Learn About Evolution</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🧠 Behavior</h2>
+
+        <p>
+            Explore communication, social groups, learning
+            and tool use.
+        </p>
+
+        <a href="#behavior">
+            <button>Explore Behavior</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🤝 Human–Chimpanzee Interaction</h2>
+
+        <p>
+            Learn how humans interact with chimpanzees,
+            including research and conservation.
+        </p>
+
+        <a href="#interaction">
+            <button>Explore Interaction</button>
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📝 Test Yourself</h2>
+
+        <p>
+            Think you know your stuff?
+            Take the quiz and see what you remember!
+        </p>
+
+        <a href="#quiz">
+            <button>🏆 Take the Quiz</button>
+        </a>
+
+    </div>
+
+</div>
+<div class="card">
+
+    <h2>🌍 About This Project</h2>
+
+    <p>
+        Welcome to the Human & Chimpanzee Learning Project!
+    </p>
+
+    <p>
+        This educational website was created to make learning
+        about humans and chimpanzees interesting, simple and fun.
+    </p>
+
+    <h3>👨🏽‍💻 About the Creator</h3>
+
+    <p>
+        Created by <strong>Wisdom</strong> 🇿🇦
+    </p>
+
+    <p>
+        This project was created as a student project to help
+        other learners explore science through interactive
+        lessons, quizzes and activities.
+    </p>
+
+    <h3>🧠 What Can You Learn?</h3>
+
+    <p>
+        🧬 Similarities<br>
+        🔍 Differences<br>
+        🌳 Evolution<br>
+        🧠 Behavior<br>
+        🤝 Human–chimpanzee interaction<br>
+        🌍 Conservation
+    </p>
+
+    <h3>❤️ Support the Project</h3>
+
+    <p>
+        If you enjoy this website and want to help it grow,
+        you can support the project in the future.
+    </p>
+
+    <p>
+        <strong>Donation details will be added when a safe
+        payment method is set up.</strong>
+    </p>
+
+</div>
+
+<div class="share">
+
+    <h2>📢 Enjoyed Learning?</h2>
+
+    <p>
+        Share this website with your classmates,
+        friends and anyone who loves science!
+    </p>
+
+    <button onclick="shareWebsite()">
+        📤 Share Website
+    </button>
+
+</div>
+
+<footer>
+
+    <p>
+        🧑🏽 🐒 Human & Chimpanzee Learning Project
+    </p>
+
+    <p>
+        Learn • Explore • Discover
+    </p>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+
+
+
+</section>
+<section class="page" id="pg-similarities" data-title="Similarities" hidden>
+
+<header>
+    <h1>🧬 Human & Chimpanzee Similarities</h1>
+    <p>What do we have in common?</p>
+</header>
+
+<div class="container">
+
+    <div class="lesson">
+        <h2>🧬 Shared Evolutionary History</h2>
+
+        <p>
+            Humans and chimpanzees are different species, but they
+            share an ancient common ancestor.
+        </p>
+
+        <div class="fact">
+            💡 <strong>Remember:</strong> Humans did not evolve from
+            the chimpanzees living today.
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h2>🧠 Brain & Learning</h2>
+
+        <p>
+            Both humans and chimpanzees have complex brains and can
+            learn from experience.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🤝 Social Behavior</h2>
+
+        <p>
+            Both species live in social groups and can form
+            relationships with other members of their groups.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🛠️ Tool Use</h2>
+
+        <p>
+            Chimpanzees can use objects as tools, while humans
+            have developed extremely complex technologies.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🧬 DNA</h2>
+
+        <p>
+            Humans and chimpanzees have very similar DNA because
+            of their shared evolutionary history.
+        </p>
+
+        <div class="fact">
+            💡 DNA comparisons are one of the ways scientists
+            study evolutionary relationships.
+        </div>
+    </div>
+
+    <a class="back" href="#home">← Back to Home</a>
+</div>
+
+</section>
+<section class="page" id="pg-differences" data-title="Differences" hidden>
+
+<header>
+    <h1>🔍 Human & Chimpanzee Differences</h1>
+    <p>How are we different?</p>
+</header>
+
+<div class="container">
+
+    <div class="lesson">
+        <h2>🚶 Movement</h2>
+        <p>
+            Humans are adapted for regular upright walking on two legs.
+            Chimpanzees usually move using all four limbs, although they
+            can walk upright for short periods.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🧠 Brain</h2>
+        <p>
+            Humans generally have a larger brain relative to body size
+            than chimpanzees, with major differences in brain organization
+            and development.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🗣️ Communication</h2>
+        <p>
+            Humans use highly complex spoken and written languages.
+            Chimpanzees communicate using vocalizations, gestures,
+            facial expressions and other signals.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🏠 Culture & Technology</h2>
+        <p>
+            Humans create extremely complex technologies, cities and
+            institutions. Chimpanzees also show learned behaviors and
+            traditions, including different tool-use behaviors between groups.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>💡 Important</h2>
+
+        <div class="fact">
+            Humans and chimpanzees are different species.
+            Their differences developed over a very long evolutionary
+            history after their lineages separated from a common ancestor.
+        </div>
+    </div>
+
+    <a class="back" href="#home">← Back to Home</a>
+</div>
+
+</section>
+<section class="page" id="pg-evolution" data-title="Evolution" hidden>
+
+<header>
+    <h1>🌳 Evolution</h1>
+    <p>The evolutionary relationship between humans and chimpanzees</p>
+</header>
+
+<div class="container">
+
+    <div class="lesson">
+        <h2>🧬 A Common Ancestor</h2>
+
+        <p>
+            Humans and chimpanzees are different species. However,
+            scientists have evidence that their evolutionary lineages
+            share an ancient common ancestor.
+        </p>
+
+        <div class="fact">
+            💡 <strong>Important:</strong> Humans did not evolve from
+            the chimpanzees that are alive today.
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h2>🌿 Think of a Tree</h2>
+
+        <p>
+            Evolution can be imagined like a branching tree. A branch
+            can split into different lineages that continue changing
+            over many generations.
+        </p>
+
+        <div class="timeline">
+            🌳 Common ancestral population
+            <br>
+            ↙️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↘️
+            <br>
+            🧑 Human lineage &nbsp;&nbsp; 🐒 Chimpanzee lineage
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h2>🦴 How Do Scientists Know?</h2>
+
+        <p>
+            Scientists compare fossils, anatomy, DNA and other evidence
+            to investigate evolutionary relationships.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🧠 What Does Evolution Mean?</h2>
+
+        <p>
+            Evolution is the change in inherited characteristics of
+            populations over generations.
+        </p>
+    </div>
+
+    <a class="back" href="#home">← Back to Home</a>
+</div>
+
+</section>
+<section class="page" id="pg-behavior" data-title="Behavior" hidden>
+
+<header>
+    <h1>🧠 Behavior & Intelligence</h1>
+    <p>How humans and chimpanzees learn, communicate and live together</p>
+</header>
+
+<div class="container">
+
+    <div class="lesson">
+        <h2>👥 Social Groups</h2>
+        <p>
+            Humans and chimpanzees are social species. Chimpanzees
+            live in communities with complex relationships, while
+            humans live in many different kinds of social groups.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🗣️ Communication</h2>
+        <p>
+            Humans communicate using complex languages, gestures
+            and facial expressions. Chimpanzees also use vocalizations,
+            gestures, facial expressions and body movements to communicate.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🛠️ Tool Use</h2>
+        <p>
+            Chimpanzees can use objects as tools, such as using
+            suitable objects to help obtain food. Humans have developed
+            much more complex tools and technologies.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>📚 Learning</h2>
+        <p>
+            Chimpanzees can learn through observation and experience.
+            Some behaviors can also be passed between members of a group.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>💡 Important</h2>
+
+        <div class="fact">
+            Intelligence is not one simple ability. Scientists study
+            many different abilities, including memory, learning,
+            problem-solving and communication.
+        </div>
+    </div>
+
+    <a class="back" href="#home">← Back to Home</a>
+
+</div>
+
+</section>
+<section class="page" id="pg-interaction" data-title="Interaction" hidden>
+
+<header>
+    <h1>🤝 Human–Chimpanzee Interaction</h1>
+    <p>How humans and chimpanzees share the world</p>
+</header>
+
+<div class="container">
+
+    <div class="lesson">
+        <h2>🐒 Chimpanzees and Their Environment</h2>
+
+        <img
+            class="chimp-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Chimpanzee_8.jpg"
+            alt="Chimpanzee" loading="lazy" onerror="this.style.display='none'">
+
+        <p>
+            Chimpanzees depend on forests for food, shelter and
+            places to live. Human activities can change these
+            environments.
+        </p>
+
+        <div class="fact">
+            💡 Protecting natural habitats is an important part
+            of chimpanzee conservation.
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h2>🌳 Habitat Loss</h2>
+
+        <p>
+            Activities such as deforestation and changes in land use
+            can reduce and divide chimpanzee habitats.
+        </p>
+
+        <p>
+            When forests become separated, chimpanzee communities
+            can have less access to food and safe areas.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🔬 Scientific Research</h2>
+
+        <p>
+            Scientists study chimpanzees to learn about their
+            behavior, communication, social relationships and
+            ecology.
+        </p>
+
+        <div class="fact">
+            🧠 Researchers should follow ethical guidelines and
+            avoid unnecessarily disturbing the animals.
+        </div>
+    </div>
+
+    <div class="lesson">
+        <h2>🌍 Conservation</h2>
+
+        <p>
+            Conservation can include protecting forests,
+            monitoring chimpanzee populations and working with
+            communities that live near chimpanzee habitats.
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🎥 Watch and Learn</h2>
+
+        <p>
+            Watch an educational video about chimpanzees and
+            conservation.
+        </p>
+
+<div class="lesson">
+
+    <h2>🎥 Watch & Learn</h2>
+
+    <p>
+        Explore these educational resources to learn more about
+        chimpanzees, human evolution and conservation.
+    </p>
+
+    <p>
+        <a href="https://svs.gsfc.nasa.gov/14507" target="_blank" rel="noopener"
+           target="_blank"
+           style="
+           display:inline-block;
+           padding:14px 20px;
+           margin:8px;
+           background:#287a43;
+           color:white;
+           text-decoration:none;
+           border-radius:10px;
+           font-weight:bold;
+           ">
+           🌍 Chimpanzee Habitat Conservation
+        </a>
+    </p>
+
+    <p>
+        <a href="https://www.smithsonianmag.com/videos/ask-smithsonian-can-chimps-be-genetically-eng/" target="_blank" rel="noopener"
+           target="_blank"
+           style="
+           display:inline-block;
+           padding:14px 20px;
+           margin:8px;
+           background:#164a2b;
+           color:white;
+           text-decoration:none;
+           border-radius:10px;
+           font-weight:bold;
+           ">
+           🧬 Humans & Chimpanzee DNA
+        </a>
+    </p>
+
+    <p>
+        <a href="https://humanorigins.si.edu/evidence/genetics" target="_blank" rel="noopener"
+           target="_blank"
+           style="
+           display:inline-block;
+           padding:14px 20px;
+           margin:8px;
+           background:#287a43;
+           color:white;
+           text-decoration:none;
+           border-radius:10px;
+           font-weight:bold;
+           ">
+           🔬 Explore the DNA Evidence
+        </a>
+    </p>
+
+</div>
+
+        <p>
+            <small>
+                Replace VIDEO_ID with the ID of the YouTube video
+                you want to use.
+            </small>
+        </p>
+    </div>
+
+    <div class="lesson">
+        <h2>🧠 Think About It</h2>
+
+        <p>
+            What can humans do to protect chimpanzees while also
+            supporting communities that live near their habitats?
+        </p>
+    </div>
+
+    <a class="back" href="#home">← Back to Home</a>
+</div>
+
+</section>
+<section class="page" id="pg-quiz" data-title="Quiz" hidden>
+
+<header>
+    <h1>📝 Human & Chimpanzee Quiz</h1>
+    <p>Test what you have learned!</p>
+</header>
+
+<div class="container">
+
+    <form id="quizForm">
+
+        <div class="question">
+            <h2>1. What do humans and chimpanzees share?</h2>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                A. An ancient common ancestor
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                B. Exactly the same DNA
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                C. The same species
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>2. Did humans evolve from chimpanzees alive today?</h2>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                A. Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                B. No
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>3. What can chimpanzees use?</h2>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                A. Tools
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                B. Cars
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                C. Computers
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>4. What is one way scientists study evolution?</h2>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                A. DNA
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                B. Weather forecasts
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                C. Music
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>5. What can threaten chimpanzee habitats?</h2>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                A. Deforestation
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                B. Reading
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                C. Sleeping
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>6. Are humans and chimpanzees the same species?</h2>
+
+            <label>
+                <input type="radio" name="q6" value="a">
+                A. Yes
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="b">
+                B. No
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>7. Which is a chimpanzee communication method?</h2>
+
+            <label>
+                <input type="radio" name="q7" value="a">
+                A. Gestures
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="b">
+                B. Writing novels
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>8. Why are forests important to chimpanzees?</h2>
+
+            <label>
+                <input type="radio" name="q8" value="a">
+                A. They provide habitat and resources
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="b">
+                B. They provide smartphones
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>9. What do scientists compare when studying evolutionary relationships?</h2>
+
+            <label>
+                <input type="radio" name="q9" value="a">
+                A. DNA and fossils
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="b">
+                B. Phone brands
+            </label>
+        </div>
+
+
+        <div class="question">
+            <h2>10. What is conservation?</h2>
+
+            <label>
+                <input type="radio" name="q10" value="a">
+                A. Protecting species and their environments
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="b">
+                B. Destroying habitats
+            </label>
+        </div>
+
+
+        <button type="button" onclick="checkQuiz()">
+            📝 Submit Quiz
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+<div id="certificateBox" style="display:none; text-align:center; margin-top:25px; background:var(--card); padding:25px; border-radius:15px;">
+    <h2>🏆 You completed the quiz!</h2>
+
+    <p>Enter your name to receive your certificate:</p>
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Your name"
+        style="padding:12px; width:90%; max-width:400px; border-radius:8px; border:1px solid #aaa; background:var(--card); color:var(--text);"
+    >
+
+    <br><br>
+
+    <button type="button" onclick="createCertificate()">
+        🏆 Get My Certificate
+    </button>
+    <button type="button" onclick="saveCertificate()">
+        💾 Save Certificate
+    </button>
+</div>
+
+<div id="certificate" style="display:none;"></div>
+
+    <a class="back" href="#home">← Back to Home</a>
+</div>
+
+
+
+
+
+</section>
+<script>
+
+
+function shareWebsite() {
+
+    if (navigator.share) {
+
+        navigator.share({
+            title: "Human & Chimpanzee",
+            text: "Check out this educational website about humans and chimpanzees!",
+            url: window.location.href
+        });
+
+    } else {
+
+        alert(
+            "Copy this website link and send it to your friends!"
+        );
+
+    }
+
+}
+
+
+
+
+let finalScore = 0;
+
+function checkQuiz() {
+
+    let answers = {
+        q1: "a",
+        q2: "b",
+        q3: "a",
+        q4: "a",
+        q5: "a",
+        q6: "b",
+        q7: "a",
+        q8: "a",
+        q9: "a",
+        q10: "a"
+    };
+
+    let score = 0;
+
+    for (let question in answers) {
+
+        let selected = document.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[question]) {
+            score++;
+        }
+    }
+
+    finalScore = score;
+
+    let percentage = (score / 10) * 100;
+
+    document.getElementById("result").innerHTML =
+        "🎉 Your score: " +
+        score +
+        "/10 (" +
+        percentage +
+        "%)";
+
+    document.getElementById("certificateBox").style.display = "block";
+}
+
+
+function createCertificate() {
+
+    let name = document.getElementById("studentName").value.trim();
+
+    if (name === "") {
+        alert("Please enter your name first.");
+        return;
+    }
+
+    document.getElementById("certificate").style.display = "block";
+
+    document.getElementById("certificate").innerHTML = `
+
+    <div style="
+        margin-top:30px;
+        padding:35px 20px;
+        border:8px solid #164a2b;
+        border-radius:18px;
+        background:#f5fff7;
+        color:#222;
+        text-align:center;
+    ">
+
+        <div style="font-size:45px;">
+            🏆
+        </div>
+
+        <p style="
+            color:#287a43;
+            font-size:15px;
+            font-weight:bold;
+            letter-spacing:2px;
+        ">
+            HUMAN & CHIMPANZEE
+            <br>
+            LEARNING PROJECT
+        </p>
+
+        <h1 style="
+            color:#164a2b;
+            font-size:30px;
+            margin:15px 0;
+        ">
+            Certificate of Achievement
+        </h1>
+
+        <p style="font-size:17px;">
+            This educational certificate is proudly presented to
+        </p>
+
+        <h2 style="
+            font-size:32px;
+            color:#287a43;
+            margin:15px 0;
+        ">
+            ${name}
+        </h2>
+
+        <p style="font-size:17px;">
+            for successfully completing the
+        </p>
+
+        <h2 style="color:#164a2b;">
+            Human & Chimpanzee Quiz
+        </h2>
+
+        <div style="
+            margin:25px auto;
+            padding:15px;
+            max-width:350px;
+            background:#dff0e3;
+            border-radius:12px;
+        ">
+
+            <p style="font-size:22px; margin:5px;">
+                🎯 Score
+            </p>
+
+            <p style="
+                font-size:30px;
+                font-weight:bold;
+                color:#164a2b;
+                margin:5px;
+            ">
+                ${finalScore}/10
+            </p>
+
+        </div>
+
+        <p style="font-size:16px;">
+            Keep learning. Keep exploring. Keep discovering! 🌍
+        </p>
+
+        <div style="
+            margin-top:35px;
+            display:flex;
+            justify-content:space-around;
+            gap:20px;
+            flex-wrap:wrap;
+        ">
+
+            <div>
+
+                <p style="margin-bottom:5px;">
+                    __________________
+                </p>
+
+                <strong>
+                    CHAF BRWZY
+                </strong>
+
+                <p style="font-size:13px;">
+                    Project Creator
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p style="margin-bottom:5px;">
+                    __________________
+                </p>
+
+                <strong>
+                    ${new Date().toLocaleDateString()}
+                </strong>
+
+                <p style="font-size:13px;">
+                    Date
+                </p>
+
+            </div>
+
+        </div>
+
+        <p style="
+            margin-top:30px;
+            font-size:12px;
+            color:#555;
+        ">
+            Educational project certificate — not an official
+            school or professional qualification.
+        </p>
+
+    </div>
+
+    `;
+}
+
+
+function saveCertificate() {
+    window.print();
+}
+
+
+</script>
+<script>
+(function(){
+  var ids=['home', 'similarities', 'differences', 'evolution', 'behavior', 'interaction', 'quiz'];
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(ids.indexOf(h)<0)h='home';
+    ids.forEach(function(i){document.getElementById('pg-'+i).hidden=(i!==h);});
+    var t=document.getElementById('pg-'+h).getAttribute('data-title');
+    document.title=h==='home'?t:'Human & Chimpanzee - '+t;
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);
+  show();
+})();
+</script>
+</body>
+</html>
